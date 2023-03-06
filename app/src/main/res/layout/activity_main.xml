@@ -5,24 +5,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation = "vertical"
-    android:background="@color/colorAccent"
+    android:background="#eddcd2"
     android:weightSum="5"
     tools:context=".MainActivity">
 
 
-<RelativeLayout
+    <androidx.appcompat.widget.Toolbar
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/toolbar"
+    android:background="#764EBD"
+    app:logo="@drawable/vision"
+    app:title="Vision"
+    app:titleMarginStart="30dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+    <RelativeLayout
         android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="1">
+        android:layout_height="38dp"
+        android:layout_weight="1">
 
-    <ImageView
-        android:id="@+id/homeImg"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_centerInParent="true"
-        android:src="@drawable/round_visibility_black_48dp" />
+        <ImageView
+            android:id="@+id/homeImg"
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:src="@drawable/b" />
 
-</RelativeLayout>
+    </RelativeLayout>
 
     <GridLayout
         android:layout_width="match_parent"
@@ -51,7 +69,7 @@
                     android:layout_height="100dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
-                    android:src="@drawable/round_email_black_48dp" />
+                    android:src="@drawable/email" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -83,7 +101,7 @@
                     android:layout_height="100dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
-                    android:src="@drawable/round_call_black_48dp_copy" />
+                    android:src="@drawable/call" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -115,7 +133,7 @@
                     android:layout_height="100dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
-                    android:src="@drawable/round_today_black_48dp_copy" />
+                    android:src="@drawable/chargingg" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -147,7 +165,7 @@
                     android:layout_height="100dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
-                    android:src="@drawable/round_add_a_photo_black_48dp_copy" />
+                    android:src="@drawable/moneyy" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -161,7 +179,14 @@
                     android:textStyle="bold" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
+
     </GridLayout>
 
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:background="#FFFFFF"
+        app:srcCompat="@drawable/info" />
 
 </LinearLayout>

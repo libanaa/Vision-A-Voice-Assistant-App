@@ -15,3 +15,5 @@ The proposed system is to build a customized application which acts as a voice a
 
 For more detials, please check my blog:
 https://visionandroidapp.blogspot.com/
+
+

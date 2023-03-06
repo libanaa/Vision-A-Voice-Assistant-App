@@ -18,7 +18,9 @@ import java.lang.IllegalArgumentException
 import java.util.*
 
 
-class MainActivity : AppCompatActivity(), View.OnClickListener,
+class
+
+MainActivity : AppCompatActivity(), View.OnClickListener,
     View.OnLongClickListener,
     TextToSpeech.OnInitListener {
 
@@ -39,12 +41,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
         phoneMngr.setOnClickListener(this)
         timeDate.setOnClickListener(this)
         cameraCard.setOnClickListener(this)
+        imageButton.setOnClickListener(this)
 
         msgBox.setOnLongClickListener(this)
         phoneMngr.setOnLongClickListener(this)
         timeDate.setOnLongClickListener(this)
         cameraCard.setOnLongClickListener(this)
-
+        imageButton.setOnLongClickListener(this)
 
     }
 
@@ -55,6 +58,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
             R.id.phoneMngr -> "You clicked phone manager!"
             R.id.timeDate -> "You clicked Time/Date and Battery status!"
             R.id.cameraCard -> "You clicked phone camera!"
+            R.id.imageButton -> "You clicked about app"
             else -> throw IllegalArgumentException("Undefined Clicked")
 
         }
@@ -69,6 +73,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
             R.id.phoneMngr -> Intent(this, PhoneActivity::class.java)
             R.id.timeDate -> Intent(this, TimeDateActivity::class.java)
             R.id.cameraCard -> Intent(this, CameraActivity::class.java)
+            R.id.imageButton -> Intent(this, AboutActivity::class.java)
             //R.id.cameraCard -> Intent(this, Camera::class.java)
             else -> throw IllegalArgumentException("Undefined Clicked")
         }
@@ -102,6 +107,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
         super.onDestroy()
     }
 }
+
+
+
 
 
 

@@ -19,6 +19,7 @@ val TAG = "SPEECH"
 
 class TimeDateActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.OnInitListener {
 
+
     private var tts: TextToSpeech? = null
 
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
